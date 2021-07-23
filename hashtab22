@@ -1,0 +1,58 @@
+import java.util.*;
+class hashtable
+{
+public static void main(String args[])
+{
+Hashtable<Integer,Integer> h2=new Hashtable<Integer,Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter size");
+int n=sc.nextInt();
+System.out.println("enter the elements");
+for(int i=1;i<=n;i++)
+{
+int key=sc.nextInt();
+int value=sc.nextInt();
+h2.put(key,value);
+}
+System.out.println("enter key value");
+int k=sc.nextInt();
+if(h2.containsKey(k))
+{
+int y=h2.get(k)+5000;
+h2.put(k,y);
+System.out.println(h2);
+}
+else
+System.out.println(" value Not found");
+
+}
+}
+
+
+
+enter size
+5
+enter the elements
+101 50000
+102 45000
+103 35000
+104 40000
+105 45000
+enter key value
+103
+{105=45000, 104=40000, 103=40000, 102=45000, 101=50000}
+
+
+
+
+enter size
+5
+enter the elements
+101 50000
+102 45000
+103 35000
+104 40000
+105 45000
+enter key value
+109
+ value Not found
